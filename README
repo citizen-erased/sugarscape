@@ -1,0 +1,50 @@
+A Sugarscape simulation written in Python.
+For more info check out:
+http://en.wikipedia.org/wiki/Sugarscape
+http://www.amazon.co.uk/Growing-Artificial-Societies-Science-Adaptive/dp/0262550253
+
+
+Required Libraries:
+To run the code Python (2.6 or 2.7) must be installed.
+The following python libraries are required:
+PySFML (SFML 1.6)
+PyOpenGL
+PyYAML
+matplotlib
+Python Imaging Library
+
+These libraries can be either downloaded from their websites or, on linux, are likely to be in the distribution's repositories.
+The code should run with Python 2.6 or 2.7, however some of the libraries don't officially support 2.7.
+
+
+
+Running:
+The simulation can be run by:
+python main.py
+
+
+
+Configuration:
+The configuration file sugarscape.yaml is read. Unfortunately loading a different file requires changing the file path in the code.
+It would be useful to have it specified as a command line parameter (using Python's argparse library) but I didn't have time.
+This config file defines the world's properties which should be mostly self explanatory.
+The screenshots directory must exist for screenshots to be written.
+
+
+
+Controls (make sure the sugarscape window has focus):
+v       - toggle data visualisation window
+space   - pause the simulation
+escape  - quit
+F1      - take a screenshot. if the data visualisation window is open, a screenshot of it will also be written.
+1       - draw agents
+2       - draw each agent's gender (blue=male, pink=female)
+3       - draw each agent's culture (color defined by cultural group)
+4       - draw each agent's sugar reserves (red-green depending on reserves)
+5       - draw each agent's spice reserves (red-green depending on reserves)
+6       - draw each agent's health (red=diseases, green=no diseases)
+q       - draw environment's sugar (black-yellow depending on tile's reserves)
+w       - draw environemtn's spice (black-yellow depending on tile's reserves)
+e       - draw tiles which are occupied by agents (only really useful for debuggin)
+r       - draw environment's pollution (black-white, from no pollution to maximum polluted)
+

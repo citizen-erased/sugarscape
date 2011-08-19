@@ -1,0 +1,101 @@
+#
+# simulation properties
+#
+sugar_file:   "sugarscape_sugar.png"
+spice_file:   "sugarscape_spice.png"
+regions_file: "sugarscape_regions.png"
+
+# random
+# comment this out to use a random seed
+random_seed : 23808252
+
+# agent properties
+num_agents             : 100
+vision_range           : [6, 10]
+sugar_metabolism_range : [1, 4]
+spice_metabolism_range : [1, 4]
+initial_sugar_range    : [20, 50]
+initial_spice_range    : [20, 50]
+max_age_range          : [60, 100]
+m_fertile_start_range  : [12, 15]
+m_fertile_end_range    : [50, 60]
+f_fertile_start_range  : [12, 15]
+f_fertile_end_range    : [40, 50]
+num_culture_tags       : 11
+
+# agent mutations
+vision_mutation_chance           : 1
+global_vision_range              : [6, 35]
+vision_mutation_range            : [1, 2]
+
+sugar_metabolism_mutation_chance : 100
+global_sugar_metabolism_range    : [1, 10]
+sugar_metabolism_mutation_range  : [1, 1]
+
+spice_metabolism_mutation_chance : 100
+global_spice_metabolism_range    : [1, 5]
+spice_metabolism_mutation_range  : [1, 1]
+
+age_mutation_chance              : 100
+global_age_range                 : [50, 200]
+age_mutation_range               : [1, 4]
+
+# diseases
+num_initial_diseases        : 10
+num_agent_diseases          : 0
+disease_string_length_range : [1, 10]
+disease_extra_sugar_range   : [1, 1]
+disease_extra_spice_range   : [1, 1]
+
+disease_infliction_ticks    : 100
+disease_infliction_agents   : 1
+
+# pollution
+pollution_ticks            : 1
+pollution_sugar_metabolism : 0.5 
+pollution_spice_metabolism : 0.1 
+pollution_harvest          : 0.1 
+pollution_decay            : 0.3
+
+
+#
+# season definitions
+#
+seasons:
+  - name: spring
+    ticks: 50
+    sugar_growth: 1
+    spice_growth: 1
+
+  - name: summer
+    ticks: 50
+    sugar_growth: 1
+    spice_growth: 1
+
+  - name: autumn
+    ticks: 50
+    sugar_growth: 1
+    spice_growth: 1
+
+  - name: winter
+    ticks: 50
+    sugar_growth: 1
+    spice_growth: 1
+
+
+#
+# region definitions
+#
+regions:
+  - region_id: 100
+    season_names: [spring, summer, autumn, winter]
+
+  - region_id: 200
+    season_names: [summer, autumn, winter, spring]
+
+  - region_id: 150
+    season_names: [autumn, winter, spring, summer]
+
+  - region_id: 50
+    season_names: [winter, spring, summer, autumn]
+
